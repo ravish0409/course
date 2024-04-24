@@ -1,0 +1,234 @@
+/* General Styles */
+
+
+
+/* Navigation */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.5;
+ 
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+  background-color: #151418;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo a span {
+  color: #8739fa;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.2s all ease-in-out;
+  color: #fff;
+}
+
+.menu:hover a {
+  opacity: 0.4;
+}
+
+.menu a:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    background-color: #151418;
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  
+  .menu a {
+    margin-left: 12px;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px; 
+}
+/* Hero Section */
+.hero {
+
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 0; 
+  background-color: #91a5ba;
+}
+
+.hero h1 {
+ 
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+ 
+  font-size: 18px;
+  padding: 10px;
+}
+
+.btn-primary { 
+  background-color: #ffc107; 
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Benefits Section */
+.benefits { 
+  background-color: #596d8a;
+  padding: 60px 0; 
+}
+
+.benefits h2 {
+  text-align:center;
+  margin-bottom: 40px;
+}
+
+.benefit-boxes {
+  display: flex; /* For side-by-side boxes */
+  justify-content: space-between;
+}
+
+.benefit-box { 
+  text-align: center;
+  padding: 20px;
+  width: 30%; 
+}
+
+/* Add styles for testimonials, footer, and more ...  */
+/* ... Your existing styles ... */
+
+/* Responsive Styles */
+
+/* Smaller tablets and large phones */ 
+@media (max-width: 768px) { 
+  .benefit-boxes {
+      flex-direction: column; /* Stack benefit boxes vertically */
+  }
+
+  .benefit-box {
+      width: 100%; /* Make benefit boxes full-width */
+      margin-bottom: 20px; 
+  }
+}
+
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .hero h1 {
+      font-size: 1.2rem; /* Reduce headline size for very small screens*/
+  }
+
+
+
+}
+
+
+.menu li a.active { 
+  background-color: #8739fa; /* Or your desired highlight color */
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Quote Bubble */
+.quote-bubble {
+  width: 55vw;
+  /* max-width: 400px; */
+  padding: 45px;
+  border-radius: 20px;
+  background-image: radial-gradient(circle, #4299af 1%, #5e7995 75%);
+  /* position: absolute; */
+  /* opacity: 31.8; */
+  box-shadow: -20px 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.back {
+  --s: 82px; /* control the size */
+  --c1: #b2b2b2;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+  
+  --_g: var(--c3) 0 120deg,#0000 0;
+  background:
+    conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
+    conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
+    conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
+    linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
+                          var(--c1) 0 calc(500%/6),var(--c2) 0);
+  background-size: calc(1.732*var(--s)) var(--s);
+}
+
+
